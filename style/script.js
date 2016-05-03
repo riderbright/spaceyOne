@@ -196,7 +196,7 @@ window.onload = function () {
         this.x = x;
         this.y = y;
         this.speed = speed;
-        this.src = src;
+        this.src = src
         //this.src = valueAtIndexOf(i)
         this.gameMove = gameMove;
         this.image = new Image();
@@ -243,10 +243,8 @@ window.onload = function () {
     var boxArray = [];
     for (i = 0; i < 12; i++) {
         var box = new MakerOne(1270 + i * 100, 50 + (Math.random() * (canvas.height - 70)), 400, boxImage[0], 10);
-        var boxOne = new MakerOne(1270 + i * 100, 50 + (Math.random() * (canvas.height - 70)), 100, boxImage[5], 10);
-        var rock = new MakerOne(1270 + i * 100, 50 + (Math.random() * (canvas.height - 70)), 100, blockImage[16], 10);
+        
         box.reset = reset;
-        rock.reset = reset;
         boxArray.push(box);
 
     };
@@ -339,10 +337,10 @@ window.onload = function () {
         if (40 in keysDown) {
             redShip.y += redShip.speed * modifier;
         }
-        if (32 in keysDown) {
+        if(32 in keysDown) {
             drawRed = true;
             redShot.y = redShip.y + 3;
-            redShot.x = redShip.x - 24;
+            //redShot.x = redShip.x - 24;
         }
         shipHit.x = redShip.x - 3;
         shipHit.y = redShip.y - 3;
